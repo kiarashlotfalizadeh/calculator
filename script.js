@@ -13,3 +13,24 @@ function multiply(a, b) {
 function divide(a, b) {
   return a / b;
 }
+
+let firstNumber;
+let operator;
+let secondNumber;
+
+function operate(num1, num2, symbol) {
+  switch(symbol) {
+    case "+":
+      add(num1, num2);
+      break;
+    case "-":
+      subtract(num1, num2);
+      break;
+    case "*":
+      multiply(num1, num2);
+      break;
+    case "/":
+      divide(num1, num2);
+      break;
+  }
+}
