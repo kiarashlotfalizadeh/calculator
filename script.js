@@ -26,11 +26,34 @@ function operate(num1, num2, symbol) {
     case "-":
       subtract(num1, num2);
       break;
-    case "*":
+    case "&times;":
       multiply(num1, num2);
       break;
-    case "/":
+    case "&divide;":
       divide(num1, num2);
       break;
   }
 }
+
+let input = document.querySelector("#equation");
+let numberButtons = document.querySelectorAll(".number");
+let operatorButtons = document.querySelectorAll(".operator");
+let clearButton = document.querySelector(".clear");
+
+for (let button of numberButtons) {
+  button.addEventListener("click", function() {
+    input.value += this.textContent;
+  })
+}
+
+for (let button of operatorButtons) {
+  button.addEventListener("click", function() {
+    input.value += this.textContent;
+  })
+}
+
+clearButton.addEventListener("click", function() {
+  input.value = "";
+})
+
+let equation = input.value;
