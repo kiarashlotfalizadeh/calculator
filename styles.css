@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0d0d; /* Darker background for a more dramatic effect */
+  font-family: 'Roboto', sans-serif;
+  color: #fff; /* Default text color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  background-color: #1c1c1c; /* Slightly lighter dark background */
+  max-width: 400px;
+  width: 90%;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  text-align: right;
+  background-color: #333; /* Darker input background */
+  color: #fff; /* White text */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.topRow, .row, .bottomRow {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  flex-grow: 1;
+  padding: 20px;
+  margin: 2px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background-color: #444;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  background-color: #555;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+button.operator {
+  background-color: #d32f2f; /* Ferrari red for operators */
+  border-color: #d32f2f;
+  box-shadow: 0 4px 6px rgba(211, 47, 47, 0.5);
+}
+
+button.operator:hover {
+  background-color: #e53935;
+  box-shadow: 0 6px 12px rgba(229, 57, 53, 0.7);
+}
+
+button.equals {
+  background-color: #4CAF50; /* Green equals button */
+  color: white;
+  border-color: #4CAF50;
+  box-shadow: 0 4px 6px rgba(76, 175, 80, 0.5);
+}
+
+button.equals:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 12px rgba(69, 160, 73, 0.7);
+}
+
+button.clear {
+  background-color: #d32f2f; /* Ferrari red for clear */
+  color: white;
+  border-color: #d32f2f;
+  box-shadow: 0 4px 6px rgba(211, 47, 47, 0.5);
+}
+
+button.clear:hover {
+  background-color: #e53935;
+  box-shadow: 0 6px 12px rgba(229, 57, 53, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1em;
+  }
+}
+
